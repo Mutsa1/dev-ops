@@ -1,22 +1,22 @@
 #!/bin/bash
 
-echo "Uninstall old versions \n"
+echo "Uninstall old versions "
 
 sudo apt-get remove docker docker-engine docker.io
 
-echo "Uninstall old versions Completed \n"
+echo "Uninstall old versions Completed "
 
-echo "Install using the repository \n"
+echo "Install using the repository "
 
-echo "\n"
+echo ""
 
-echo " SET UP THE REPOSITORY \n"
+echo " SET UP THE REPOSITORY "
 
-echo "1. Update the apt package index: \n"
+echo "1. Update the apt package index: "
 
 sudo apt-get update
 
-echo "2. Install packages to allow apt to use a repository over HTTPS: \n"
+echo "2. Install packages to allow apt to use a repository over HTTPS: "
 
 sudo apt-get install \
     apt-transport-https \
@@ -24,30 +24,31 @@ sudo apt-get install \
     curl \
     software-properties-common
 
-echo "3. Add Docker’s official GPG key: \n"
+echo "3. Add Docker’s official GPG key: "
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-echo "Verify that the key fingerprin \n "
+echo "Verify that the key fingerprin  "
 sudo apt-key fingerprint 0EBFCD88
 
-echo "set up the stable repository \n"
+echo "set up the stable repository "
 
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
 
-echo "============================= INSTALL DOCKER CE ============================ \n\n"
+echo "============================= INSTALL DOCKER CE ============================"
 
-echo "Update the apt package index: \n"
+echo "Update the apt package index:"
+
 sudo apt-get update
 
-echo "Install the latest version of Docker CE \n"
+echo "Install the latest version of Docker CE "
 sudo apt-get install docker-ce
 
-echo "After the successful completion of the docker please check with \n\n\n"
+echo "After the successful completion of the docker please check with "
 
-echo "DOKER VERSION \n\n"
+echo "DOKER VERSION "
 
 docker version
 
