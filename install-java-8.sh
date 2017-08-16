@@ -38,4 +38,5 @@ echo "run the following command"
 
 echo "source /etc/environment" 
 
+
 echo $JAVA_HOME

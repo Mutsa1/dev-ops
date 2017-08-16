@@ -28,7 +28,7 @@ services:
         #- ~/volumes/registry/certs:/certs
 
         # uncomment to persist data to a volume
-        - ../../docker-registry/data:/var/lib/registry
+        - ../../persistance-volumes/docker-registry/data:/var/lib/registry
   registry-ui:
     image: konradkleine/docker-registry-frontend:v2
     environment:
