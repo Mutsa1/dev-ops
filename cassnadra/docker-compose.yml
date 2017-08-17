@@ -1,18 +1,18 @@
 version: '2'
 services:
-    hiringapp-cassandra:
+    cassandra-one:
         image: cassandra:3.9
-        # volumes:
-        #     - ~/volumes/jhipster/hiringapp/cassandra/:/var/lib/cassandra/data
+        volumes:
+            - ./data/cassandra/:/var/lib/cassandra/data
         ports:
             - 7000:7000
             - 7001:7001
             - 7199:7199
             - 9042:9042
             - 9160:9160
-    hiringapp-cassandra-node:
+    cassandra-node:
         image: cassandra:3.9
         environment:
-            - CASSANDRA_SEEDS=hiringapp-cassandra
+            - CASSANDRA_SEEDS=cassandra-one, cassandra-two
             - CASSANDRA_CLUSTER_NAME=cassandra-cluster
     
