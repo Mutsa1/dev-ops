@@ -5,9 +5,12 @@ services:
     container_name: elasticsearch-two
     environment:
       - cluster.name=docker-cluster
-      - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - "discovery.zen.ping.unicast.hosts=54.169.122.211:9300" # replace the IP 
+      # replace the IP
+      - network.publish_host=192.168.1.20
+      - discovery.zen.ping.multicast.enabled=false
+      - discovery.zen.ping.unicast.hosts=192.168.1.10
+      - discovery.zen.ping.timeout=3s
+      - discovery.zen.minimum_master_nodes=1 
     # ulimits:
     #   memlock:
     #     soft: -1

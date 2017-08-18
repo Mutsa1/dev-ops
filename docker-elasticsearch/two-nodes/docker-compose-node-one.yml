@@ -5,8 +5,11 @@ services:
     container_name: elasticsearch-one
     environment:
       - cluster.name=docker-cluster
-      - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - network.publish_host=192.168.1.10
+      - discovery.zen.ping.multicast.enabled=false
+      - discovery.zen.ping.unicast.hosts=192.168.1.20
+      - discovery.zen.ping.timeout=3s
+      - discovery.zen.minimum_master_nodes=1
     # ulimits:
     #   memlock:
     #     soft: -1
