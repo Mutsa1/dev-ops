@@ -13,6 +13,6 @@ services:
     cassandra-node:
         image: cassandra:3.9
         environment:
-            - CASSANDRA_SEEDS=cassandra-one, cassandra-two
+            - CASSANDRA_SEEDS=13.126.91.100, 
             - CASSANDRA_CLUSTER_NAME=cassandra-cluster
     
