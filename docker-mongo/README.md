@@ -44,4 +44,3 @@ Come out of the container
 ```bash
 exit
 ```
-

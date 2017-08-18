@@ -7,4 +7,4 @@ services:
           - 9000:9000
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
-            - ../../persistance-volumes/portiner/data:/data
+            - ./data:/data
