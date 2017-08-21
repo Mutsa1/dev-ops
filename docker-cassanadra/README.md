@@ -13,13 +13,13 @@ docker exec -it cassandra-two bash
 ## Connect Node 1 running in Host:18.220.240.109
 
 ```bash
-docker run -it --net cassnadra_default  --link cassandra-one:cassandra --rm cassandra cqlsh cassandra
+docker run -it --net multinoderemotemachines_default  --link cassandra-one:cassandra --rm cassandra cqlsh cassandra
 ```
 
 ## Connect Node 1 running in Host:52.14.135.228
 
 ```bash
-docker run -it --net cassnadra_default  --link cassandra-two:cassandra --rm cassandra cqlsh cassandra
+docker run -it --net multinoderemotemachines_default  --link cassandra-two:cassandra --rm cassandra cqlsh cassandra
 ```
 
 ## DO This All steps in one node and cross check from the other node
