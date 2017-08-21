@@ -1,6 +1,6 @@
 version: '2'
 services:
-    cassandra-one:
+    cassandra-three:
         image: cassandra:3.9
         volumes:
             - ./db/cassandra/:/var/lib/cassandra/data
@@ -13,8 +13,8 @@ services:
         environment:
             - CASSANDRA_CLUSTER_NAME='alpha-cluster'
             - CASSANDRA_NUM_TOKENS=256
-            - CASSANDRA_SEEDS=18.220.240.109, 52.14.135.228
+            - CASSANDRA_SEEDS=18.220.240.109, 52.14.135.228 
             - CASSANDRA_LISTEN_ADDRESS=0.0.0.0
-            - CASSANDRA_RPC_ADDRESS=52.14.135.228
+            - CASSANDRA_RPC_ADDRESS=18.220.240.109
             - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
     
