@@ -14,7 +14,7 @@ services:
             - CASSANDRA_CLUSTER_NAME='alpha-cluster'
             - CASSANDRA_NUM_TOKENS=256
             - CASSANDRA_SEEDS=18.220.240.109, 52.14.135.228
-            - CASSANDRA_LISTEN_ADDRESS=18.220.240.109
-            - CASSANDRA_RPC_ADDRESS=18.220.240.109
+            - CASSANDRA_LISTEN_ADDRESS=172.31.45.105
+            - CASSANDRA_RPC_ADDRESS=172.31.45.105
             - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
     
