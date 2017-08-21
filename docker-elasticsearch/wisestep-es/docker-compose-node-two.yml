@@ -1,0 +1,33 @@
+version: '2'
+services:
+  elasticsearch2:
+    image: elasticsearch:2.4.1
+    container_name: elasticsearch-two
+    environment:
+      - cluster.name=docker-cluster
+      # replace the IP
+      - network.publish_host=192.168.1.20
+      - discovery.zen.ping.multicast.enabled=false
+      - discovery.zen.ping.unicast.hosts=192.168.1.10
+      - discovery.zen.ping.timeout=3s
+      - discovery.zen.minimum_master_nodes=1 
+    # ulimits:
+    #   memlock:
+    #     soft: -1
+    #     hard: -1
+    # mem_limit: 1g
+    volumes:
+      - ./esdata2:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+#     networks:
+#       - esnet
+# volumes:
+#   esdata1:
+#     driver: local
+#   esdata2:
+#     driver: local
+
+# networks:
+#   esnet:
