@@ -12,6 +12,8 @@ docker exec -it cassandra-two bash
 
 ## Connect Node 1 running in Host:18.220.240.109
 
+NOTE : --net multinoderemotemachines_default[this will be changed according to your folder name]
+
 ```bash
 docker run -it --net multinoderemotemachines_default  --link cassandra-one:cassandra --rm cassandra cqlsh cassandra
 ```
