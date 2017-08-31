@@ -1,0 +1,18 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "dockerise nodejs app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "dockerise",
+    "nodejs",
+    "app",
+    "docker",
+    "nodejs"
+  ],
+  "author": "JinnaBalu",
+  "license": "ISC"
+}
