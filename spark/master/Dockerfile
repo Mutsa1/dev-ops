@@ -1,4 +1,4 @@
-FROM bde2020/spark-base:2.2.0-hadoop2.7
+FROM spark-base
 
 MAINTAINER Wisestep <jinna.balu@outlook.com>
 
